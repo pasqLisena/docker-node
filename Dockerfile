@@ -12,7 +12,7 @@ RUN apk add --update --no-cache wget sudo make gcc g++ python linux-headers paxc
     && make -j$(grep -c '^processor' /proc/cpuinfo) -C out mksnapshot BUILDTYPE=Release \
     && paxctl -cm out/Release/mksnapshot \
     && make -j$(grep -c '^processor' /proc/cpuinfo) \
-    & make install \
+    && make install \
     && paxctl -cm /usr/bin/node \
     && cd / \
     && if [ -x /usr/bin/npm ]; then \

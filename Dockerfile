@@ -24,8 +24,8 @@ RUN apk add --update --no-cache wget ca-certificates sudo make gcc g++ python li
          npm install -g npm@${NPM_VERSION} \
     &&   find /usr/lib/node_modules/npm -name test -o -name .bin -type d | xargs rm -rf; \
        fi \
-    && rm -rf /node-${VERSION}.tar.gz \
-              /node-${VERSION} \
+    && rm -rf /node-v${VERSION}.tar.gz \
+              /node-v${VERSION} \
               /usr/share/man \
               /tmp/* \
               /var/cache/apk/* \

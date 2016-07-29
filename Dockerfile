@@ -16,9 +16,9 @@ RUN apk add --update --no-cache wget sudo make gcc g++ python linux-headers paxc
     && paxctl -cm /usr/bin/node \
     && cd / \
     && if [ -x /usr/bin/npm ]; then \
-    &&   npm install -g npm@${NPM_VERSION} \
+         npm install -g npm@${NPM_VERSION} \
     &&   find /usr/lib/node_modules/npm -name test -o -name .bin -type d | xargs rm -rf; \
-    && fi \
+       fi \
     && rm -rf /node-${VERSION}.tar.gz \
               /node-${VERSION} \
               /usr/share/man \

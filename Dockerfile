@@ -3,7 +3,7 @@ FROM alpine:3.4
 ENV VERSION=6.3.1 \
     NPM_VERSION=3
 
-RUN apk add --update --no-cache wget sudo make gcc g++ python linux-headers paxctl libgcc libstdc++ \
+RUN apk add --update --no-cache wget ca-certificates sudo make gcc g++ python linux-headers paxctl libgcc libstdc++ \
     && wget https://nodejs.org/dist/v${VERSION}/node-v${VERSION}.tar.gz \
     && tar -xzvf node-v${VERSION}.tar.gz \
     && cd node-v${VERSION} \

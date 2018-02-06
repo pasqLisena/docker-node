@@ -1,7 +1,7 @@
 FROM alpine:3.4
 
-ENV VERSION=6.3.1 \
-    NPM_VERSION=3
+ENV VERSION=9.1.0 \
+    NPM_VERSION=5.6.0
 
 RUN apk add --update --no-cache wget ca-certificates sudo make gcc g++ python linux-headers paxctl libgcc libstdc++ \
     && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub \
